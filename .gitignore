@@ -1,0 +1,5 @@
+.spyproject/
+__pycache__/
+*.pyc
+*.pickle
+LeapDeveloperKit_3.2.1_win/
