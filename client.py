@@ -10,8 +10,11 @@ import time
 import pickle
 from LeapClassPy3 import CoOrdinates,LeapFinger3,LeapHand3
 
+
+server_ip = '10.99.62.18'
+
 client_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-client_socket.connect(("localhost", 8220))
+client_socket.connect((server_ip, 8220))
 
 
 #client_socket.setblocking(0)

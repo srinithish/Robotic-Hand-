@@ -18,11 +18,20 @@ import LeapBroadcast
 #
 #
 import time
-host = 'localhost'
+
+#host = 'localhost'
+
+#host  = '10.99.62.18'
+
+
+host = socket.gethostbyname( '0.0.0.0' )
 port = 8220
+
+
 address = (host, port)
 
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+socket.gethostname()
 server_socket.bind(address)
 server_socket.listen(5)
 
