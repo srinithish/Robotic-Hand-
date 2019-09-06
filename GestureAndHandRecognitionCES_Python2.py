@@ -101,7 +101,39 @@ class LeapData():
                 
                 if not hand.is_left:
                     absTipPosition,relativeTipDirection = self.getFingerTipAttributes(hand,'Index')
-                    print " absTipPosition:  %s,relativeTipDirection: %s" % (absTipPosition, relativeTipDirection)
+                    
+#                    if relativeTipDirection[2]
+                    
+                    
+                    print('---------Finger-----------')
+                    if relativeTipDirection[2] < 0:
+                        print 'index finger raised'
+                        
+                    elif relativeTipDirection[2] > 0:
+                        print 'index finger lowered'
+                        
+                    
+                    
+                    print('-------------Hand-------------')
+                    if absTipPosition[0] < -100:
+                        
+                        print 'Hand pointing peeprorni'
+                        
+                    if absTipPosition[0] > 100:
+                        
+                        print 'Hand pointing cheese'
+                    
+                    elif  absTipPosition[0] < 100 and  absTipPosition[0] > -100:
+                        
+                        print 'Hand pointing plain'
+                        
+#                    print " absTipPosition:  %s,relativeTipDirection: %s" % (absTipPosition, relativeTipDirection)
+                    
+                    
+                    
+                    
+                    
+                    
                 else: 
                     print 'no right hand detected'
         else:
