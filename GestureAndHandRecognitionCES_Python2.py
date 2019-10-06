@@ -105,37 +105,40 @@ class LeapData():
 #                    if relativeTipDirection[2]
                     
                     
-                    print('---------Finger-----------')
                     if relativeTipDirection[2] < 0:
-                        print 'index finger raised'
+                        selection =  'none'
+                        
+#                        print 'index finger raised'
                         
                     elif relativeTipDirection[2] > 0:
-                        print 'index finger lowered'
+                        selection  = 'pizza selected'
                         
                     
                     
-                    print('-------------Hand-------------')
+                    
                     if absTipPosition[0] < -100:
                         
-                        print 'Hand pointing peeprorni'
+                        pizza =  'peeprorni'
                         
                     if absTipPosition[0] > 100:
                         
-                        print 'Hand pointing cheese'
+                        pizza =  'cheese'
                     
                     elif  absTipPosition[0] < 100 and  absTipPosition[0] > -100:
                         
-                        print 'Hand pointing plain'
+                        pizza =  'plain'
                         
 #                    print " absTipPosition:  %s,relativeTipDirection: %s" % (absTipPosition, relativeTipDirection)
                     
                     
+                    print 'Hand is pointing ' + pizza + " and selection " + selection
                     
                     
                     
                     
                 else: 
                     print 'no right hand detected'
+        
         else:
             
             print 'no hands detected'
